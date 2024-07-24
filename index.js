@@ -17,7 +17,7 @@ require('dotenv').config();
 app.listen(port, () => {});
 
 // Make a call to OpenWeather's API to get the weather for a provided latitude & longitude (w/ provided units)
-app.get('/weather/:latitude/:longitude/:units', [ cors(), cache('5 minutes') ], (req, res) => {
+app.get('/weather/:latitude/:longitude/:units', [ cors(), cache('10 minutes') ], (req, res) => {
   console.log("--- asking for weather with", req.params);
 
   const WEATHER_KEY = process.env.WEATHER_API_KEY;
