@@ -14,7 +14,9 @@ const cache = apicache.middleware;
 // Using dotenv because committing API keys to a Github repository is a bad idea
 require('dotenv').config();
 
-app.listen(port, () => {});
+app.listen(port, () => {
+  console.log('Express server listening on port', port);
+});
 
 // Make a call to OpenWeather's API to get the weather for a provided latitude & longitude (w/ provided units)
 app.get('/weather/:latitude/:longitude/:units', [ cors(), cache('10 minutes') ], (req, res) => {
