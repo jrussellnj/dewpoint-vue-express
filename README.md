@@ -85,6 +85,7 @@ The result will look like this:
 
 ## To run
 - Clone this repository
+- Run `npm install`
 - Create the `.env` file as described below
 - Run `npm start`
 
